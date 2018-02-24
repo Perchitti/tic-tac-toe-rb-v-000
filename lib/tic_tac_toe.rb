@@ -84,8 +84,8 @@ counter = 0
   counter
 end
 
-def move(board, index, current_player)
-  board[index] = current_player
+def move(board, index, player)
+  board[index] = player
 end
 
 def winner(board)
