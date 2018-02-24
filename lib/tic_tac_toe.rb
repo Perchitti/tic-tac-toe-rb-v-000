@@ -8,6 +8,8 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [6,4,2]
 ]
+
+
 def play(board)
   while !over?(board)
     turn(board)
