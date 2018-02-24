@@ -10,24 +10,24 @@ WIN_COMBINATIONS = [
 ]
 
 
+#def play(board)
+#  while !over?(board)
+#    turn(board)
+#  end
+#  if won?(board)
+#    puts "Congratulations #{winner(board)}!"
+#  elsif draw?(board)
+#    puts "Cat's Game!"
+#  end
+#end
+
 def play(board)
-  while !over?(board)
+  turn_count = 0
+  while turn_count < 9
     turn(board)
-  end
-  if won?(board)
-    puts "Congratulations #{winner(board)}!"
-  elsif draw?(board)
-    puts "Cat's Game!"
+    turn_count+=1
   end
 end
-
-#def play(board)
-#  turn_count = 0
-#  while turn_count < 9
-  #  turn(board)
-  #  turn_count+=1
-  #end
-#end
 
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
