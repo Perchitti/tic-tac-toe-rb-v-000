@@ -69,8 +69,10 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
-def move(board, index, current_player)
-  board[index] = current_player
+
+
+def current_player(board)
+  turn_count(board) % 2 == 0 ? "X" : "O"
 end
 
 def turn_count(board)
@@ -83,12 +85,9 @@ counter = 0
   counter
 end
 
-
-def current_player(board)
-  turn_count(board) % 2 == 0 ? "X" : "O"
+def move(board, index, current_player)
+  board[index] = current_player
 end
-
-# Define your WIN_COMBINATIONS constan
 
 def winner(board)
   if winning_combo = won?(board)
